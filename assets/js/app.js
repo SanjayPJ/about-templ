@@ -75,6 +75,7 @@ $("#index-button").click(function () {
     $("#contact-content").hide();
     $("#project-content").hide();
     $("#portfolio-content").hide();
+    $("#index-container").show();
 });
 
 $("#contact-button").click(function () {
@@ -82,6 +83,7 @@ $("#contact-button").click(function () {
     $("#contact-content").show();
     $("#project-content").hide();
     $("#portfolio-content").hide();
+    $("#index-container").hide();
 });
 
 $("#project-button").click(function () {
@@ -89,6 +91,7 @@ $("#project-button").click(function () {
     $("#contact-content").hide();
     $("#portfolio-content").hide();
     $("#project-content").show();
+    $("#index-container").hide();
 });
 
 $("#portfolio-button").click(function () {
@@ -96,4 +99,5 @@ $("#portfolio-button").click(function () {
     $("#contact-content").hide();
     $("#project-content").hide();
     $("#portfolio-content").show();
+    $("#index-container").hide();
 });
