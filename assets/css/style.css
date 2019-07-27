@@ -1,0 +1,13 @@
+#author{
+    width: 100%;
+}
+.icon-padding-right{
+    width: 20px;
+}
+#index-button{
+    cursor: pointer;
+}
+.img-wrapper{
+    height: 200px;
+    overflow: hidden;
+}
