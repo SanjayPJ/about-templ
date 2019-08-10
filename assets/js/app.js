@@ -47,7 +47,7 @@ const finder = (e) => {
                         <tr>
                             <td>${repo.full_name}</td>
                             <td>${repo.language}</td>
-                            <td><a href="http://github.com/sanjaypj/${repo.name}" target="_blank" class="text-uppercase"><small>http://github.com/sanjaypj/${repo.name}</small></a></td>
+                            <td><a href="http://github.com/sanjaypj/${repo.name}" target="_blank" class="text-uppercase"><small>http://github.com/sanjaypj/${repo.name} <i class="fa  fa-long-arrow-right"></i></small></a></td>
                         </tr>
                     `;
                     // console.log(repo)
