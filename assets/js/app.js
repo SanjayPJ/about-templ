@@ -24,7 +24,7 @@ const github = new Github;
 
 //search input
 // const search_user = document.getElementById('search-user');
-
+var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
 //search input event listener
 const finder = (e) => {
@@ -43,14 +43,13 @@ const finder = (e) => {
 
                 let repo_table = "";
                 data.repos.map(repo => {
+                    date = new Date(repo.updated_at);
                     repo_table += `
                         <tr>
-                            <td>${repo.full_name}</td>
-                            <td>${repo.language}</td>
-                            <td><a href="http://github.com/sanjaypj/${repo.name}" target="_blank" class="text-uppercase"><small>http://github.com/sanjaypj/${repo.name} <i class="fa  fa-long-arrow-right"></i></small></a></td>
+                            <td><a class="text-uppercase" href="http://github.com/sanjaypj/${repo.name}" target="_blank" class="text-uppercase"><small>${repo.full_name}</small></a></td>
+                            <td>${date.toLocaleDateString("en-US")}</td>
                         </tr>
                     `;
-                    // console.log(repo)
                 });
                 document.getElementById('drophere').innerHTML = repo_table;
 
@@ -70,7 +69,7 @@ $("#contact-content").hide();
 $("#project-content").hide();
 $("#portfolio-content").hide();
 
-$("#index-button").click(function () {
+$("#index-button").click(function() {
     $("#index-content").show();
     $("#contact-content").hide();
     $("#project-content").hide();
@@ -78,7 +77,7 @@ $("#index-button").click(function () {
     $("#index-container").show();
 });
 
-$("#contact-button").click(function () {
+$("#contact-button").click(function() {
     $("#index-content").hide();
     $("#contact-content").show();
     $("#project-content").hide();
@@ -86,7 +85,7 @@ $("#contact-button").click(function () {
     $("#index-container").hide();
 });
 
-$("#project-button").click(function () {
+$("#project-button").click(function() {
     $("#index-content").hide();
     $("#contact-content").hide();
     $("#portfolio-content").hide();
@@ -94,7 +93,7 @@ $("#project-button").click(function () {
     $("#index-container").hide();
 });
 
-$("#portfolio-button").click(function () {
+$("#portfolio-button").click(function() {
     $("#index-content").hide();
     $("#contact-content").hide();
     $("#project-content").hide();

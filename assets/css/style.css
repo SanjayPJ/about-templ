@@ -4,7 +4,7 @@
     font-family: 'Lexend Deca', sans-serif;
 }
 
-*/ #author {
+#author {
     width: 100%;
 }
 
@@ -24,6 +24,10 @@
 ul {
     padding: 0;
     list-style: none;
+}
+
+.w-100 {
+    width: 100%;
 }
 
 .social-icon {
