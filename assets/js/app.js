@@ -47,7 +47,7 @@ const finder = (e) => {
                     repo_table += `
                         <tr>
                             <td><a class="text-uppercase" href="http://github.com/sanjaypj/${repo.name}" target="_blank" class="text-uppercase"><small>${repo.full_name}</small></a></td>
-                            <td>${date.toLocaleDateString("en-US")}</td>
+                            <td align="right"><small>${date.toLocaleDateString("en-US")}</small></td>
                         </tr>
                     `;
                 });
