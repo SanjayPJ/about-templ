@@ -66,38 +66,37 @@ const finder = (e) => {
 
 finder();
 
-$("#contact-content").hide();
-$("#project-content").hide();
-$("#portfolio-content").hide();
-
-$("#index-button").click(function() {
-    $("#index-content").show();
+let hideAll = () => {
+    $("#index-content").hide();
     $("#contact-content").hide();
     $("#project-content").hide();
     $("#portfolio-content").hide();
+    $("#index-container").hide();
+    $("#thoughts-content").hide();
+}
+
+$("#index-button").click(function() {
+    hideAll();
+    $("#index-content").show();
     $("#index-container").show();
 });
 
 $("#contact-button").click(function() {
-    $("#index-content").hide();
+    hideAll();
     $("#contact-content").show();
-    $("#project-content").hide();
-    $("#portfolio-content").hide();
-    $("#index-container").hide();
 });
 
 $("#project-button").click(function() {
-    $("#index-content").hide();
-    $("#contact-content").hide();
-    $("#portfolio-content").hide();
+    hideAll();
     $("#project-content").show();
-    $("#index-container").hide();
 });
 
 $("#portfolio-button").click(function() {
-    $("#index-content").hide();
-    $("#contact-content").hide();
-    $("#project-content").hide();
+    hideAll();
     $("#portfolio-content").show();
-    $("#index-container").hide();
+});
+
+$("#thoughts-button").click(function() {
+    hideAll();
+    $("#thoughts-content").show();
 });
