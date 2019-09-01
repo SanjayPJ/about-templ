@@ -34,7 +34,7 @@ const finder = (e) => {
     if (user_text !== '') {
         github.get_user(user_text).then(data => {
             if (data.profile.message === 'Not Found') {
-                //show alert
+                //show alertw
                 // ui.show_alert('User not Found', 'alert alert-danger');
             } else {
                 //show profile
@@ -46,8 +46,9 @@ const finder = (e) => {
                     date = new Date(repo.updated_at);
                     repo_table += `
                         <tr>
-                            <td><a class="text-uppercase" href="http://github.com/sanjaypj/${repo.name}" target="_blank" class="text-uppercase"><small>${repo.full_name}</small></a></td>
-                            <td align="right"><small>${date.toLocaleDateString("en-US")}</small></td>
+                            <td><a href="http://github.com/sanjaypj/${repo.name}" target="_blank">${repo.full_name}</a></td>
+                            <td>${repo.language}</td>
+                            <td>${date.toLocaleDateString("en-US", options)}</td>
                         </tr>
                     `;
                 });
