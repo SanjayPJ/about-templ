@@ -75,6 +75,10 @@ let hideAll = () => {
     $("#thoughts-content").hide();
 }
 
+hideAll();
+$("#index-content").show();
+$("#index-container").show();
+
 $("#index-button").click(function() {
     hideAll();
     $("#index-content").show();
