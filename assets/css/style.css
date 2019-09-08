@@ -165,4 +165,9 @@ ul.social-icons {
     #index-content {
         padding-top: 40px;
     }
+
+    .margin-vertical-3 {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
 }
